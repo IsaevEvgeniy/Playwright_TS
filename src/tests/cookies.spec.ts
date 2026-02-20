@@ -48,7 +48,7 @@ test('Сross-session cookie persistence', async () => {
 
   await allure.step('Second session - Verify cookie persists', async () => {
     browser2 = await firefox.launchPersistentContext(sessionPath, {
-      headless: false,
+      headless: true,
     });
 
     const page2: Page = browser2.pages()[0];
