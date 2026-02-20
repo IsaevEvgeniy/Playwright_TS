@@ -18,7 +18,7 @@ test('Сross-session cookie persistence', async () => {
 
   await allure.step('First session - Create and set cookie', async () => {
     browser1 = await firefox.launchPersistentContext(sessionPath, {
-      headless: false,
+      headless: true,
       viewport: { width: 1280, height: 720 },
     });
 
